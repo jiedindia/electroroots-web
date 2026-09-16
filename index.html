@@ -28,6 +28,26 @@
                 <div class="loading-progress"></div>
             </div>
         </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <a href="tel:+918981104676" class="contact-button" onclick="copyNumber(event)">Contact Us</a>
+        </div>
     </div>
+
+    <script>
+        function copyNumber(event) {
+            navigator.clipboard.writeText('+91 89811 04676').then(() => {
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = 'Number Copied!';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
