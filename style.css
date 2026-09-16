@@ -13,6 +13,11 @@
     padding: 0;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
@@ -58,7 +63,7 @@ body {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 20px;
     text-align: center;
